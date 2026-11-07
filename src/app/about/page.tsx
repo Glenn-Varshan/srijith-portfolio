@@ -4,164 +4,120 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#151512] text-[#eee8dc]">
+    <main className="min-h-screen bg-[#292522] text-[#eee8dc]">
 
-      {/* Page heading */}
-      <section className="mx-auto max-w-7xl px-6 pb-16 pt-40 lg:px-12">
 
-        <p className="mb-6 text-xs uppercase tracking-[0.35em] text-[#b99462]">
-          The Artist
-        </p>
+{/* ARTIST INTRODUCTION */}
+<section className="px-5 pb-20 pt-36 md:px-12">
 
-        <h1 className="font-serif text-6xl leading-tight md:text-8xl">
-          ABOUT <span className="text-[#b99462]">SRIJITH.</span>
-        </h1>
+  {/* ARTIST PHOTOGRAPH */}
+  <div className="relative mx-auto w-full max-w-[1050px]">
+    <div className="absolute -inset-2 border border-[#b99a63]/40" />
 
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/60">
-          A musical journey shaped by melody, tradition and
-          the expressive possibilities of the mandolin.
-        </p>
+    <div className="relative aspect-[16/9] overflow-hidden bg-[#1d1917]">
+      <Image
+        src="/images/about.JPG"
+        alt="Srijith Poosarla performing on the mandolin"
+        fill
+        priority
+        sizes="(max-width: 768px) 95vw, 1050px"
+        className="object-cover object-center"
+      />
+    </div>
+  </div>
 
-      </section>
+  {/* OVERLAPPING BIOGRAPHY PANEL */}
+  <div className="relative z-10 mx-auto -mt-16 w-[92%] max-w-[850px] border border-[#b99a63]/30 bg-[#292522] px-6 py-10 shadow-2xl md:-mt-24 md:px-16 md:py-14">
 
-      {/* Artist introduction */}
-      <section className="border-y border-white/10 bg-[#1b1b17]">
+    <div className="text-center">
+      <p className="text-xs tracking-[0.35em] text-[#c6a46a]">
+        ABOUT THE ARTIST
+      </p>
 
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center lg:px-12">
+      <h1 className="mt-4 font-serif text-4xl md:text-6xl">
+        Srijith Poosarla
+      </h1>
 
-          {/* Artist photograph */}
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <Image
-              src="/images/hero.jpg"
-              alt="Srijith Poosarla with his mandolin"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center"
-            />
-          </div>
+      <p className="mt-4 text-[11px] tracking-[0.4em] text-[#c6a46a]">
+        MANDOLIN ARTIST
+      </p>
+    </div>
 
-          {/* Biography */}
-          <div>
+    <div className="mx-auto mt-9 max-w-2xl space-y-5 text-center text-sm leading-8 text-[#d0c5b8] md:text-base">
+      <p>
+        Srijith Poosarla is a mandolin artist whose musical
+        journey explores the expressive possibilities of the
+        instrument through performance, collaboration and
+        a deep engagement with music.
+      </p>
 
-            <p className="mb-6 text-xs uppercase tracking-[0.3em] text-[#b99462]">
-              01 / Introduction
-            </p>
+      <p>
+        His artistic journey reflects an interest in exploring
+        musical traditions while developing his own expression
+        through the mandolin.
+      </p>
+    </div>
 
-            <h2 className="font-serif text-4xl leading-tight md:text-5xl">
-              Srijith
-              <br />
-              <span className="text-[#b99462]">Poosarla.</span>
-            </h2>
+  </div>
+</section>
 
-            <div className="mt-8 space-y-5 text-base leading-8 text-white/60">
 
-              <p>
-                Srijith Poosarla is a mandolin instrumentalist
-                whose musical journey explores the relationship
-                between tradition, melody and individual expression.
-              </p>
+      {/* MUSICAL IDENTITY */}
+      <section className="border-t border-[#b99a63]/20 px-6 py-20 md:px-16">
+        <div className="mx-auto max-w-5xl">
 
-              <p>
-                Through the mandolin, he explores the possibilities
-                of instrumental music, bringing together musical
-                influences and a personal approach to performance.
-              </p>
+          <p className="text-xs tracking-[0.3em] text-[#c6a46a]">
+            THE MUSIC
+          </p>
 
-              <p>
-                His work reflects a continuing interest in
-                musical exploration, performance and creative
-                expression.
-              </p>
+          <h2 className="mt-5 font-serif text-3xl md:text-4xl">
+            Musical Identity
+          </h2>
 
-            </div>
+          <div className="mt-10 grid gap-10 md:grid-cols-3">
 
-          </div>
-        </div>
-      </section>
-
-      {/* Musical identity */}
-      <section className="mx-auto max-w-7xl px-6 py-28 lg:px-12">
-
-        <p className="mb-6 text-xs uppercase tracking-[0.3em] text-[#b99462]">
-          02 / Musical Identity
-        </p>
-
-        <h2 className="max-w-3xl font-serif text-4xl leading-tight md:text-6xl">
-          Rooted in tradition.
-          <br />
-          <span className="text-[#b99462]">
-            Open to exploration.
-          </span>
-        </h2>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-
-          {[
-            {
-              number: "01",
-              title: "The Instrument",
-              description:
-                "The mandolin as a medium for melody, expression and musical exploration.",
-            },
-            {
-              number: "02",
-              title: "The Tradition",
-              description:
-                "An appreciation for musical heritage and the traditions that shape instrumental music.",
-            },
-            {
-              number: "03",
-              title: "The Expression",
-              description:
-                "Exploring new musical ideas through performance, collaboration and creativity.",
-            },
-          ].map((item) => (
-
-            <div
-              key={item.number}
-              className="border-t border-white/15 pt-7"
-            >
-              <p className="mb-8 text-sm text-[#b99462]">
-                {item.number}
-              </p>
-
-              <h3 className="font-serif text-2xl">
-                {item.title}
+            <div>
+              <h3 className="font-serif text-xl">
+                The Instrument
               </h3>
-
-              <p className="mt-4 text-sm leading-7 text-white/50">
-                {item.description}
+              <p className="mt-4 text-sm leading-7 text-[#b9b4a9]">
+                The mandolin is at the centre of Srijith's musical
+                expression and artistic exploration.
               </p>
             </div>
 
-          ))}
+            <div>
+              <h3 className="font-serif text-xl">
+                Exploration
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-[#b9b4a9]">
+                An ongoing exploration of musical ideas,
+                interpretations and creative possibilities.
+              </p>
+            </div>
 
+            <div>
+              <h3 className="font-serif text-xl">
+                Performance
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-[#b9b4a9]">
+                Sharing music through performances,
+                collaborations and live experiences.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      {/* Explore projects */}
-      <section className="border-y border-white/10 bg-[#1b1b17]">
-
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-6 py-20 md:flex-row md:items-center lg:px-12">
-
-          <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#b99462]">
-              Explore Further
-            </p>
-
-            <h2 className="font-serif text-4xl md:text-5xl">
-              Discover the music.
-            </h2>
-          </div>
-
-          <Link
-            href="/projects"
-            className="self-start border border-[#b99462] px-7 py-4 text-xs uppercase tracking-[0.15em] text-[#c5a477] transition hover:bg-[#b99462] hover:text-[#151512] md:self-auto"
-          >
-            Explore Projects ↗
-          </Link>
-
-        </div>
+      {/* PROJECTS LINK */}
+      <section className="px-6 py-16 text-center">
+        <Link
+          href="/projects"
+          className="inline-block border border-[#b99a63] px-8 py-4 text-xs tracking-[0.2em] text-[#c6a46a] transition-colors hover:bg-[#b99a63] hover:text-[#292522]"
+        >
+          EXPLORE PROJECTS
+        </Link>
       </section>
 
     </main>

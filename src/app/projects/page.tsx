@@ -34,7 +34,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-[#151512] text-[#eee8dc]">
+    <main className="min-h-screen bg-[#292522] text-[#eee8dc]">
 
       {/* Page heading */}
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-40 lg:px-12">
@@ -54,7 +54,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects grid */}
-      <section className="border-y border-white/10 bg-[#1b1b17]">
+      <section className="border-y border-white/10 bg-[#292522]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-12">
 
           <div className="mb-14 flex items-center justify-between">
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
 
           <Link
             href="/contact"
-            className="self-start border border-[#b99462] px-7 py-4 text-xs uppercase tracking-[0.15em] text-[#c5a477] transition hover:bg-[#b99462] hover:text-[#151512] md:self-auto"
+            className="self-start border border-[#292522] px-7 py-4 text-xs uppercase tracking-[0.15em] text-[#c5a477] transition hover:bg-[#b99462] hover:text-[#151512] md:self-auto"
           >
             Get in Touch ↗
           </Link>

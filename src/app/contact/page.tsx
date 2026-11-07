@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#151512] px-6 pb-24 pt-40 text-[#eee8dc] md:px-16">
+    <main className="min-h-screen bg-[#292522] px-6 pb-24 pt-40 text-[#eee8dc] md:px-16">
       <section className="max-w-4xl">
         <p className="text-xs tracking-[0.35em] text-[#b99a63]">
           GET IN TOUCH
