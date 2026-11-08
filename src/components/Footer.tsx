@@ -47,9 +47,12 @@ export default function Footer() {
             );
           })}
 
-          <span className="text-xs tracking-wider">
-            p.srijith2004@gmail.com
-          </span>
+            <a
+              href="mailto:p.srijith2004@gmail.com"
+              className="text-xs tracking-wider transition-colors duration-300 hover:text-[#c6a46a]"
+            >
+              p.srijith2004@gmail.com
+            </a>
         </div>
 
         {/* COPYRIGHT */}

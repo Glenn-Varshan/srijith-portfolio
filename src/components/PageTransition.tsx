@@ -26,7 +26,7 @@ export default function PageTransition({
           : { opacity: 1 }
       }
       transition={{
-        duration: isContactPage ? 0.8 : 0.45,
+        duration: isContactPage ? 0.8 : 0.50,
         ease: [0.25, 0.1, 0.25, 1],
       }}
     >

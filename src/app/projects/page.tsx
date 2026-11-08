@@ -1,4 +1,5 @@
 
+import InstagramGallery from "@/components/InstagramGallery";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -52,7 +53,6 @@ export default function ProjectsPage() {
           musical journey.
         </p>
       </section>
-
       {/* Projects grid */}
       <section className="border-y border-white/10 bg-[#292522]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-12">
@@ -62,6 +62,7 @@ export default function ProjectsPage() {
               The Collection
             </p>
             <p className="text-xs text-white/35">
+            
               Selected Projects
             </p>
           </div>
