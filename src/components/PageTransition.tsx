@@ -17,8 +17,8 @@ export default function PageTransition({
       key={pathname}
       initial={
         isContactPage
-          ? { y: -45 }
-          : { opacity: 0 }
+            ? { y: "-100vh" }
+            : { opacity: 0 }
       }
       animate={
         isContactPage
@@ -26,7 +26,7 @@ export default function PageTransition({
           : { opacity: 1 }
       }
       transition={{
-        duration: isContactPage ? 0.65 : 0.45,
+        duration: isContactPage ? 0.8 : 0.45,
         ease: [0.25, 0.1, 0.25, 1],
       }}
     >
