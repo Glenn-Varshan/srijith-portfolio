@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   title: "Srijith Poosarla | Mandolin Artist",
@@ -19,11 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-[#151512] text-[#eee8dc] antialiased">
-        <Navbar />
-
-        {children}
-
-        <Footer />
+          <Navbar />
+            <PageTransition>{children}</PageTransition>
+          <Footer />
       </body>
     </html>
   );

@@ -3,44 +3,38 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#292522] text-[#eee8dc]">
+    <main className="relative min-h-screen overflow-hidden bg-[#292522] text-[#eee8dc]">
+      {/* Background photograph */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/home.jpg"
+          alt="Srijith Poosarla performing on the mandolin"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
 
-      <section className="flex flex-col items-center px-5 pb-20 pt-32 md:px-12 md:pt-36">
+      {/* Dark overlay for readable text */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#171411]/90 via-[#171411]/35 to-[#171411]/20" />
 
-        {/* ARTIST PHOTOGRAPH */}
-        <div className="relative w-full max-w-[1050px]">
-          <div className="absolute -inset-2 border border-[#b99a63]/40" />
-
-          <div className="relative aspect-[16/9] overflow-hidden bg-[#1d1917]">
-            <Image
-              src="/images/home.jpg"
-              alt="Srijith Poosarla performing on the mandolin"
-              fill
-              priority
-              sizes="(max-width: 768px) 95vw, 1050px"
-              className="object-cover object-center"
-            />
-          </div>
-        </div>
-
-        {/* ARTIST NAME */}
-        <div className="mt-10 text-center">
-          <h1 className="font-serif text-4xl tracking-wide md:text-6xl">
-            Srijith Poosarla
-          </h1>
-
-          <p className="mt-4 text-[11px] tracking-[0.4em] text-[#c6a46a]">
-            MANDOLIN ARTIST
-          </p>
-        </div>
-
-        {/* INTRODUCTION */}
-        <p className="mt-7 max-w-xl text-center text-sm leading-8 text-[#d0c5b8] md:text-base">
-          Srijith Poosarla is a mandolin artist exploring the
-          expressive possibilities of music through performance,
-          collaboration and a deep engagement with his instrument.
+      {/* Homepage content */}
+      <section className="relative z-10 flex min-h-screen flex-col items-center justify-end px-6 pb-24 pt-32 text-center md:pb-32">
+        <p className="mb-5 text-[11px] tracking-[0.4em] text-[#d6b779]">
+          MANDOLIN ARTIST
         </p>
 
+        <h1 className="font-serif text-5xl tracking-wide md:text-6xl">
+          SRIJITH POOSARLA
+        </h1>
+
+        <div className="mt-6 h-px w-16 bg-[#c6a46a]" />
+
+        <p className="mt-6 max-w-xl text-sm leading-8 text-[#eee8dc]/90 md:text-base">
+          Exploring the expressive possibilities of music through
+          performance, collaboration and a deep engagement with the mandolin.
+        </p>
       </section>
     </main>
   );

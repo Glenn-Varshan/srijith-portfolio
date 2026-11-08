@@ -10,6 +10,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowUpRight,
+  FileArchive,
 } from "lucide-react";
 
 const galleryImages = [
@@ -42,18 +43,18 @@ const galleryImages = [
 
 const downloads = [
   {
-    title: "Artist Resume",
+    title: "Download Resume",
     description: "Professional background and artistic experience.",
     format: "PDF DOCUMENT",
     href: "/press/srijith-resume.pdf",
     icon: FileText,
   },
   {
-    title: "Professional Photographs",
-    description: "High-resolution photographs for media and publicity.",
-    format: "ZIP ARCHIVE",
-    href: "/press/professional-photos.zip",
-    icon: Images,
+    title: "Download Biography",
+    description: "Official artist biography for publications and media.",
+    format: "PDF DOCUMENT",
+    href: "/press/srijith-biography.pdf",
+    icon: FileText,
   },
   {
     title: "Technical Rider",
@@ -61,6 +62,20 @@ const downloads = [
     format: "PDF DOCUMENT",
     href: "/press/technical-rider.pdf",
     icon: FileText,
+  },
+  {
+    title: "Professional Photos",
+    description: "High-resolution photographs for media and publicity.",
+    format: "ZIP ARCHIVE",
+    href: "/press/professional-photos.zip",
+    icon: Images,
+  },
+  {
+    title: "Full Press Kit",
+    description: "All official press materials in one convenient archive.",
+    format: "ZIP ARCHIVE",
+    href: "/press/full-press-kit.zip",
+    icon: FileArchive,
   },
 ];
 
@@ -82,151 +97,102 @@ export default function PressPage() {
   return (
     <main className="bg-[#292522] text-[#eee8dc]">
 
-      {/* PAGE INTRO */}
-      <section className="px-6 pb-16 pt-40 md:px-16">
-        <p className="mb-5 text-xs tracking-[0.35em] text-[#b99a63]">
-          MEDIA & RESOURCES
-        </p>
+      
+        {/* PAGE INTRO */}
+        <section className="px-6 pb-12 pt-40 text-center md:px-16 md:pb-16">
+          <h1 className="font-serif text-4xl tracking-wide md:text-6xl">
+            Electronic Press Kit
+          </h1>
+          <div className="mx-auto mt-7 h-px w-20 bg-[#b99a63]" />
+        </section>
 
-        <h1 className="font-serif text-5xl md:text-7xl">
-          Press Kit
-        </h1>
 
-        <p className="mt-7 max-w-2xl text-base leading-8 text-[#b9b4a9]">
-          Official information and media resources for Srijith
-          Poosarla. For media publications, concert organisers,
-          collaborators and event enquiries.
-        </p>
-
-        {/* SECTION NAVIGATION */}
-        <div className="mt-12 flex flex-wrap gap-8 border-b border-[#454238]">
-          <a
-            href="#biography"
-            className="border-b-2 border-[#b99a63] pb-4 text-xs tracking-[0.2em] text-[#b99a63]"
-          >
-            BIOGRAPHY & DOWNLOADS
-          </a>
-
-          <a
-            href="#gallery"
-            className="pb-4 text-xs tracking-[0.2em] text-[#b9b4a9] transition-colors hover:text-[#b99a63]"
-          >
-            PHOTO GALLERY
-          </a>
-        </div>
-      </section>
-
-      {/* BIOGRAPHY */}
+      {/* BIOGRAPHY AND DOWNLOADS */}
       <section
         id="biography"
-        className="scroll-mt-28 px-6 py-12 md:px-16"
+        className="px-6 py-12 md:px-16 md:py-16"
       >
-        <div className="grid gap-12 md:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid gap-16 lg:grid-cols-[1.05fr_0.95fr]">
 
+          {/* LEFT: BIOGRAPHY */}
           <div>
             <p className="text-xs tracking-[0.3em] text-[#b99a63]">
               ABOUT THE ARTIST
             </p>
 
             <h2 className="mt-5 font-serif text-3xl md:text-4xl">
-              Biography
+              Srijith Poosarla
             </h2>
 
             <div className="mt-8 space-y-5 text-sm leading-8 text-[#b9b4a9]">
               <p>
-                [Insert Srijith Poosarla's official biography here.
-                Introduce his musical journey, background and
-                relationship with the mandolin.]
+                Srijith Poosarla is a Carnatic mandolinist from Chennai and a student of the legendary Vidwan U. Rajesh. 
+                He strives to carry forward the traditions of this style with sincerity, while bringing classical, folk and contemporary music into one sonic identity. 
+                
               </p>
 
               <p>
-                [Continue with his musical influences, training,
-                performances, collaborations and artistic approach.
-                Include only verified information.]
-              </p>
-
-              <p>
-                [Add any notable achievements, awards, recordings
-                or important performances, where applicable.]
+                He has performed at respected venues and sabhas such as Bharat Mandapam, the India Habitat Centre, the Indian Fine Arts Society and Sri Parthasarathy Swami Sabha.
+                He collaborates across dance, spoken word and fusion, performing in many languages alongside a wide range of instruments. 
+                Rooted in raga but unbound by genre, he plays with classical depth and a performer’s warmth.
               </p>
             </div>
           </div>
 
-          <div className="relative min-h-[350px] overflow-hidden md:min-h-[480px]">
-            <Image
-              src="/images/hero.jpg"
-              alt="Srijith Poosarla"
-              fill
-              priority
-              className="object-cover object-center"
-            />
-          </div>
+          {/* RIGHT: DOWNLOADS */}
+          <div>
+            <p className="text-xs tracking-[0.3em] text-[#b99a63]">
+              MEDIA RESOURCES
+            </p>
 
-        </div>
-      </section>
+            <h2 className="mt-5 font-serif text-3xl md:text-4xl">
+              Downloads
+            </h2>
 
-      {/* DOWNLOADS */}
-      <section className="px-6 py-20 md:px-16">
-        <div className="mb-10">
-          <p className="text-xs tracking-[0.3em] text-[#b99a63]">
-            PRESS MATERIAL
-          </p>
+            <p className="mt-4 text-sm leading-7 text-[#b9b4a9]">
+              Official documents and media resources for
+              publications, event organisers and collaborators.
+            </p>
 
-          <h2 className="mt-4 font-serif text-3xl md:text-4xl">
-            Downloads
-          </h2>
+            <div className="mt-8 flex flex-col">
+              {downloads.map((item) => {
+                const Icon = item.icon;
 
-          <p className="mt-4 max-w-xl text-sm leading-7 text-[#b9b4a9]">
-            Official documents and photographs available for
-            download and professional use.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-3">
-          {downloads.map((item) => {
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={item.title}
-                className="group flex flex-col justify-between border border-[#454238] p-7 transition-colors duration-300 hover:border-[#b99a63]"
-              >
-                <div>
-                  <Icon
-                    size={27}
-                    strokeWidth={1.3}
-                    className="text-[#b99a63]"
-                  />
-
-                  <h3 className="mt-8 font-serif text-2xl">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-4 min-h-14 text-sm leading-7 text-[#b9b4a9]">
-                    {item.description}
-                  </p>
-                </div>
-
-                <div className="mt-9 border-t border-[#454238] pt-5">
-                  <p className="mb-5 text-[10px] tracking-[0.2em] text-[#b99a63]">
-                    {item.format}
-                  </p>
-
+                return (
                   <a
+                    key={item.href}
                     href={item.href}
                     download
-                    className="flex items-center justify-between text-xs tracking-[0.2em] transition-colors hover:text-[#b99a63]"
+                    className="group flex items-center justify-between gap-4 border-b border-[#454238] py-5 transition-colors hover:border-[#b99a63]"
                   >
-                    DOWNLOAD FILE
+                    <div className="flex items-center gap-4">
+                      <Icon
+                        size={23}
+                        strokeWidth={1.4}
+                        className="shrink-0 text-[#b99a63]"
+                      />
+
+                      <div>
+                        <h3 className="text-sm tracking-wide transition-colors group-hover:text-[#c6a46a]">
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-1 text-xs text-[#928a7e]">
+                          {item.format}
+                        </p>
+                      </div>
+                    </div>
+
                     <Download
-                      size={17}
-                      className="transition-transform group-hover:translate-y-1"
+                      size={18}
+                      className="shrink-0 text-[#b99a63] transition-transform group-hover:translate-y-1"
                     />
                   </a>
-                </div>
-              </div>
-            );
-          })}
+                );
+              })}
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -265,6 +231,7 @@ export default function PressPage() {
               alt={galleryImages[activeImage].alt}
               fill
               priority
+              sizes="(max-width: 768px) 100vw, 90vw"
               className="object-contain"
             />
           </div>
@@ -286,7 +253,7 @@ export default function PressPage() {
           </button>
         </div>
 
-        {/* CAPTION AND THUMBNAILS */}
+        {/* CAPTION AND INDICATORS */}
         <div className="mt-5 flex items-center justify-between">
           <p className="text-sm text-[#b9b4a9]">
             {galleryImages[activeImage].caption}
@@ -308,12 +275,13 @@ export default function PressPage() {
           </div>
         </div>
 
-        {/* THUMBNAIL STRIP */}
+        {/* THUMBNAILS */}
         <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5">
           {galleryImages.map((image, index) => (
             <button
               key={image.src}
               onClick={() => setActiveImage(index)}
+              aria-label={`Select ${image.caption}`}
               className={`relative aspect-[4/3] overflow-hidden border transition-all ${
                 activeImage === index
                   ? "border-[#b99a63] opacity-100"
