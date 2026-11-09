@@ -39,10 +39,6 @@ export default function ProjectsPage() {
 
       {/* Page heading */}
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-40 lg:px-12">
-        <p className="mb-6 text-xs uppercase tracking-[0.35em] text-[#b99462]">
-          Selected Work
-        </p>
-
         <h1 className="font-serif text-6xl leading-tight md:text-8xl">
           PROJECTS<span className="text-[#b99462]">.</span>
         </h1>

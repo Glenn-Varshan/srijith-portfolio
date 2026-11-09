@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-semibold tracking-[0.2em] text-[#eee8dc]"
+          className="text-xl font-semibold tracking-[0.2em] text-[#eee8dc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5a477]"
         >
           SRIJITH<span className="text-[#b99462]"> POOSARLA</span>
         </Link>
@@ -63,10 +63,11 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`text-xs uppercase tracking-[0.16em] transition-colors duration-300 ${
+                aria-current={active ? "page" : undefined}
+                className={`relative py-1 text-xs uppercase tracking-[0.16em] transition-colors duration-300 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:bg-[#c5a477] after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5a477] ${
                   active
-                    ? "text-[#c5a477]"
-                    : "text-white/70 hover:text-[#c5a477]"
+                    ? "text-[#c5a477] after:scale-x-100"
+                    : "text-white/70 after:scale-x-0 hover:text-[#c5a477]"
                 }`}
               >
                 {item.label}

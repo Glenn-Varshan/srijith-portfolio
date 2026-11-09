@@ -114,12 +114,8 @@ export default function PressPage() {
 
           {/* LEFT: BIOGRAPHY */}
           <div>
-            <p className="text-xs tracking-[0.3em] text-[#b99a63]">
-              ABOUT THE ARTIST
-            </p>
-
             <h2 className="mt-5 font-serif text-3xl md:text-4xl">
-              Srijith Poosarla
+              BIOGRAPHY
             </h2>
 
             <div className="mt-8 space-y-5 text-sm leading-8 text-[#b9b4a9]">
@@ -139,12 +135,8 @@ export default function PressPage() {
 
           {/* RIGHT: DOWNLOADS */}
           <div>
-            <p className="text-xs tracking-[0.3em] text-[#b99a63]">
-              MEDIA RESOURCES
-            </p>
-
             <h2 className="mt-5 font-serif text-3xl md:text-4xl">
-              Downloads
+              DOWNLOADS
             </h2>
 
             <p className="mt-4 text-sm leading-7 text-[#b9b4a9]">
@@ -195,13 +187,9 @@ export default function PressPage() {
       </section>
 
       {/* PHOTO GALLERY */}
-      <section className="mx-auto mt-24 w-full max-w-5xl">
+      <section className="mx-auto w-full max-w-5xl px-6 pb-16 pt-8 md:px-0">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="text-xs tracking-[0.3em] text-[#b99a63]">
-              VISUAL ARCHIVE
-            </p>
-
             <h2 className="mt-4 font-serif text-3xl md:text-5xl">
               Photo Gallery
             </h2>
@@ -247,76 +235,6 @@ export default function PressPage() {
             <ChevronRight size={23} />
           </button>
         </div>
-
-        {/* CAPTION AND INDICATORS */}
-        <div className="mt-5 flex items-center justify-between">
-          <p className="text-sm text-[#b9b4a9]">
-            {galleryImages[activeImage].caption}
-          </p>
-
-          <div className="flex gap-2">
-            {galleryImages.map((image, index) => (
-              <button
-                key={image.src}
-                onClick={() => setActiveImage(index)}
-                aria-label={`View photograph ${index + 1}`}
-                className={`h-1.5 w-6 transition-colors ${
-                  activeImage === index
-                    ? "bg-[#b99a63]"
-                    : "bg-[#454238] hover:bg-[#8b7958]"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* THUMBNAILS */}
-        <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5">
-          {galleryImages.map((image, index) => (
-            <button
-              key={image.src}
-              onClick={() => setActiveImage(index)}
-              aria-label={`Select ${image.caption}`}
-              className={`relative aspect-[4/3] overflow-hidden border transition-all ${
-                activeImage === index
-                  ? "border-[#b99a63] opacity-100"
-                  : "border-transparent opacity-55 hover:opacity-100"
-              }`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(max-width: 640px) 33vw, 20vw"
-                className="object-cover"
-              />
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* ENQUIRIES */}
-      <section className="border-t border-[#454238] px-6 py-20 text-center md:px-16">
-        <p className="text-xs tracking-[0.3em] text-[#b99a63]">
-          MEDIA & BOOKING ENQUIRIES
-        </p>
-
-        <h2 className="mt-5 font-serif text-3xl md:text-5xl">
-          Let's work together.
-        </h2>
-
-        <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#b9b4a9]">
-          For interviews, publications, performances and collaborations,
-          please get in touch.
-        </p>
-
-        <a
-          href="/contact"
-          className="mt-8 inline-flex items-center gap-3 border border-[#b99a63] px-8 py-4 text-xs tracking-[0.2em] text-[#b99a63] transition-colors hover:bg-[#b99a63] hover:text-[#151512]"
-        >
-          CONTACT
-          <ArrowUpRight size={16} />
-        </a>
       </section>
 
     </main>

@@ -7,10 +7,6 @@ export default function MediaPage() {
 
       {/* PAGE HEADING */}
       <section className="px-6 pb-12 pt-40 text-center md:pb-16">
-        <p className="mb-5 text-xs tracking-[0.35em] text-[#b99a63]">
-          PERFORMANCES · MOMENTS · MUSIC
-        </p>
-
         <h1 className="font-serif text-5xl md:text-7xl">
           Media
         </h1>

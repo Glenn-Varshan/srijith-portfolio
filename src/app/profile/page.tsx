@@ -38,10 +38,6 @@ export default function AboutPage() {
   <div className="relative z-10 mx-auto -mt-16 w-[92%] max-w-[850px] border border-[#b99a63]/30 bg-[#292522] px-6 py-10 shadow-2xl md:-mt-24 md:px-16 md:py-14">
 
     <div className="text-center">
-      <p className="text-xs tracking-[0.35em] text-[#c6a46a]">
-        ABOUT THE ARTIST
-      </p>
-
       <h1 className="mt-4 font-serif text-4xl md:text-6xl">
         Srijith Poosarla
       </h1>
@@ -53,9 +49,6 @@ export default function AboutPage() {
 
     <div className="mx-auto mt-9 max-w-2xl space-y-5 text-center text-sm leading-8 text-[#d0c5b8] md:text-base">
       <p>
-        Carnatic Mandolin
-        Classical roots. Live energy.
-        A confluence of Carnatic, folk and contemporary music.
         Srijith Poosarla is a Carnatic mandolinist from Chennai. 
         A student of the legendary Vidwan U. Rajesh, he strives to carry forward the traditions of this style with sincerity. 
         Rooted in raga but unbound by genre, he has earned appreciation for a sound that brings classical, folk and contemporary music into one sonic identity.
