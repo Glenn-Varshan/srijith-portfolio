@@ -51,7 +51,7 @@ export default function Navbar() {
           href="/"
           className="text-xl font-semibold tracking-[0.2em] text-[#eee8dc]"
         >
-          SRIJITH<span className="text-[#b99462]">.</span>
+          SRIJITH<span className="text-[#b99462]"> POOSARLA</span>
         </Link>
 
         {/* Desktop navigation */}

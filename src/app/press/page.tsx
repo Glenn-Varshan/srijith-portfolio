@@ -15,29 +15,34 @@ import {
 
 const galleryImages = [
   {
-    src: "/press/gallery/photo-1.png",
+    src: "/press/gallery/photo-1.JPG",
     alt: "Srijith Poosarla - Artist portrait",
     caption: "Artist Portrait",
   },
   {
-    src: "/press/gallery/photo-2.png",
+    src: "/press/gallery/photo-2.JPG",
     alt: "Srijith Poosarla performing",
     caption: "Live Performance",
   },
   {
-    src: "/press/gallery/photo-3.png",
+    src: "/press/gallery/photo-3.JPG",
     alt: "Srijith Poosarla with mandolin",
     caption: "Artist Photograph",
   },
   {
-    src: "/press/gallery/photo-4.png",
+    src: "/press/gallery/photo-4.JPG",
     alt: "Srijith Poosarla at a concert",
     caption: "On Stage",
   },
   {
-    src: "/press/gallery/photo-5.png",
+    src: "/press/gallery/photo-5.JPG",
     alt: "Srijith Poosarla professional photograph",
     caption: "Behind the Music",
+  },
+    {
+    src: "/press/gallery/photo-6.JPG",
+    alt: "Srijith Poosarla professional photograph",
+    caption: "With the team",
   },
 ];
 
@@ -47,13 +52,6 @@ const downloads = [
     description: "Professional background and artistic experience.",
     format: "PDF DOCUMENT",
     href: "/press/srijith-resume.pdf",
-    icon: FileText,
-  },
-  {
-    title: "Download Biography",
-    description: "Official artist biography for publications and media.",
-    format: "PDF DOCUMENT",
-    href: "/press/srijith-biography.pdf",
     icon: FileText,
   },
   {
@@ -112,7 +110,7 @@ export default function PressPage() {
         id="biography"
         className="px-6 py-12 md:px-16 md:py-16"
       >
-        <div className="grid gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="mx-auto grid w-full max-w-5xl gap-12 lg:grid-cols-[1.05fr_0.95fr]">
 
           {/* LEFT: BIOGRAPHY */}
           <div>
@@ -197,10 +195,7 @@ export default function PressPage() {
       </section>
 
       {/* PHOTO GALLERY */}
-      <section
-        id="gallery"
-        className="scroll-mt-28 border-t border-[#454238] px-6 py-24 md:px-16"
-      >
+      <section className="mx-auto mt-24 w-full max-w-5xl">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="text-xs tracking-[0.3em] text-[#b99a63]">

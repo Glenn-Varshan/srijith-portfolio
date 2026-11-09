@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#292522] px-6 pb-24 pt-40 text-[#eee8dc] md:px-16">
-      <section className="max-w-4xl">
+      <section className="max-w-5xl">
         <p className="text-xs tracking-[0.35em] text-[#b99a63]">
           GET IN TOUCH
         </p>
@@ -17,10 +17,6 @@ export default function ContactPage() {
           general enquiries, feel free to get in touch.
         </p>
         <div>
-          <p className="text-xs tracking-[0.3em] text-[#b99a63]">
-            EMAIL
-          </p>
-
           <h2 className="mt-5 font-serif text-2xl">
             General & Booking Enquiries
           </h2>

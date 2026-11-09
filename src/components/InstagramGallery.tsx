@@ -4,12 +4,13 @@
 import { useEffect } from "react";
 
 const instagramPosts = [
-  "https://www.instagram.com/reel/DfCXrLLqXd9/?utm_source=ig_embed&amp;utm_campaign=loading",
   "https://www.instagram.com/reel/DfSGK8ECqFB/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
   "https://www.instagram.com/reel/DfZcwCrTQj6/?utm_source=ig_web_copy_link&obrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/reel/DVekZOlE7CQ/?utm_source=ig_web_copy_link&exln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
   "https://www.instagram.com/reel/DYOjuMWSkrK/?utm_source=ig_web_copy_link&cplk=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/reel/DfCXrLLqXd9/?utm_source=ig_embed&amp;utm_campaign=loading",
   "https://www.instagram.com/reel/DVjbCBFkiLc/?utm_source=ig_web_copy_link&mdxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
-  "https://www.instagram.com/reel/DVekZOlE7CQ/?utm_source=ig_web_copy_link&exln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
+  
 ];
 
 export default function InstagramGallery() {

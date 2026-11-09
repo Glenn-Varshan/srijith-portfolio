@@ -1,6 +1,5 @@
 
 import Image from "next/image";
-import InstagramGallery from "@/components/InstagramGallery";
 
 export default function Home() {
   return (

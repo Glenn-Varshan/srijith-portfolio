@@ -11,20 +11,28 @@ export default function AboutPage() {
 <section className="px-5 pb-20 pt-36 md:px-12">
 
   {/* ARTIST PHOTOGRAPH */}
-  <div className="relative mx-auto w-full max-w-[1050px]">
-    <div className="absolute -inset-2 border border-[#b99a63]/40" />
-
-    <div className="relative aspect-[16/9] overflow-hidden bg-[#1d1917]">
+    <div className="relative mx-auto w-full max-w-[1100px]">
       <Image
         src="/images/about.JPG"
         alt="Srijith Poosarla performing on the mandolin"
-        fill
+        width={1600}
+        height={900}
         priority
-        sizes="(max-width: 768px) 95vw, 1050px"
-        className="object-cover object-center"
+        className="h-auto w-full object-cover"
+          style={{
+            maskImage: `
+              linear-gradient(to bottom, transparent 0%, black 18%, black 65%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)
+            `,
+            WebkitMaskImage: `
+              linear-gradient(to bottom, transparent 0%, black 18%, black 65%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)
+            `,
+            maskComposite: "intersect",
+            WebkitMaskComposite: "source-in",
+          }}
       />
     </div>
-  </div>
 
   {/* OVERLAPPING BIOGRAPHY PANEL */}
   <div className="relative z-10 mx-auto -mt-16 w-[92%] max-w-[850px] border border-[#b99a63]/30 bg-[#292522] px-6 py-10 shadow-2xl md:-mt-24 md:px-16 md:py-14">
