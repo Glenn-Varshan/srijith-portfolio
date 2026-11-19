@@ -195,7 +195,7 @@ export default function PressPage() {
       </section>
 
       {/* PHOTO GALLERY */}
-      <section className="mx-auto mt-24 w-full max-w-5xl">
+      <section className="mx-auto mb-28 mt-24 w-full max-w-5xl md:mb-36">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="text-xs tracking-[0.3em] text-ink">
@@ -250,7 +250,7 @@ export default function PressPage() {
 
         {/* CAPTION AND INDICATORS */}
         <div className="mt-5 flex items-center justify-between">
-          <p className="text-sm text-muted">
+          <p className="text-lg text-ink md:text-xl">
             {galleryImages[activeImage].caption}
           </p>
 
@@ -268,30 +268,6 @@ export default function PressPage() {
               />
             ))}
           </div>
-        </div>
-
-        {/* THUMBNAILS */}
-        <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5">
-          {galleryImages.map((image, index) => (
-            <button
-              key={image.src}
-              onClick={() => setActiveImage(index)}
-              aria-label={`Select ${image.caption}`}
-              className={`relative aspect-[4/3] overflow-hidden border transition-all ${
-                activeImage === index
-                  ? "border-accent opacity-100"
-                  : "border-transparent opacity-55 hover:opacity-100"
-              }`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(max-width: 640px) 33vw, 20vw"
-                className="object-cover"
-              />
-            </button>
-          ))}
         </div>
       </section>
 

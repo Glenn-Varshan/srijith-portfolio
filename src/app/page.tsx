@@ -109,86 +109,98 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Each block fades in from the page background to its own colour, then back out */}
-      <div>
-        {/* INTRO */}
-        <section className="feather [--tint:var(--color-panel)] px-6 py-32 md:px-12 md:py-40">
-          <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:gap-20">
-            <Reveal>
-              <h2 className="font-heading text-4xl leading-snug md:text-6xl">
+      {/* INTRO: champagne card, text on the left, photo on the right */}
+      <section className="px-6 py-24 md:px-12 md:py-32">
+        <Reveal className="mx-auto max-w-7xl">
+          <div className="grid items-center gap-10 rounded-3xl bg-ink p-8 text-bg md:grid-cols-2 md:gap-16 md:p-14">
+            <div>
+              <h2 className="font-heading text-4xl leading-tight md:text-6xl">
                 Rooted in raga. Unbound by genre.
               </h2>
-            </Reveal>
-            <Reveal delay={150} className="space-y-5 text-base font-light leading-8 text-muted md:text-lg">
-              <p>
-                Srijith Poosarla is a Carnatic mandolinist from Chennai. A
-                student of the legendary Vidwan U. Rajesh, he strives to carry
-                forward the traditions of this style with sincerity.
-              </p>
-              <p>
-                His sound brings classical, folk and contemporary music into
-                one identity, whether on a concert stage, in a dance
-                collaboration or alongside a band.
-              </p>
+              <div className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-lg">
+                <p>
+                  Srijith Poosarla is a Carnatic mandolinist from Chennai. A
+                  student of the legendary Vidwan U. Rajesh, he strives to
+                  carry forward the traditions of this style with sincerity.
+                </p>
+                <p>
+                  His sound brings classical, folk and contemporary music into
+                  one identity, whether on a concert stage, in a dance
+                  collaboration or alongside a band.
+                </p>
+              </div>
               <Link
                 href="/profile"
-                className="inline-block border-b border-accent pb-1 text-sm font-bold uppercase tracking-[0.18em] text-accent transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                className="mt-8 inline-block rounded-lg bg-accent px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] text-bg transition-colors hover:bg-panel hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
               >
                 Read the full profile
               </Link>
-            </Reveal>
-          </div>
-        </section>
+            </div>
 
-        {/* VENUES */}
-        <section className="feather [--tint:color-mix(in_srgb,var(--color-ink)_9%,transparent)] px-6 py-32 md:px-12">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image
+                src="/images/about.JPG"
+                alt="Srijith Poosarla performing on the mandolin"
+                fill
+                sizes="(max-width: 768px) 100vw, 45vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* VENUES: moss tags */}
+      <section className="px-6 py-12 md:px-12">
+        <Reveal className="mx-auto max-w-5xl text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-ink/80">
+            Performed at
+          </p>
+          <ul className="mt-8 flex flex-wrap justify-center gap-3">
+            {venues.map((v) => (
+              <li
+                key={v}
+                className="rounded-lg border border-line bg-panel px-5 py-2.5 font-heading text-lg text-ink md:text-xl"
+              >
+                {v}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
+
+      {/* EXPLORE: moss-framed cards */}
+      <section className="px-6 pb-28 pt-20 md:px-12 md:pb-36 md:pt-28">
+        <div className="mx-auto max-w-7xl">
           <Reveal>
-            <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-ink/80">
-              Performed at
-            </p>
-            <ul className="mx-auto mt-8 flex max-w-5xl flex-wrap items-center justify-center gap-x-12 gap-y-4 text-center font-heading text-xl tracking-wide md:text-2xl">
-              {venues.map((v) => (
-                <li key={v}>{v}</li>
-              ))}
-            </ul>
+            <h2 className="font-heading text-4xl md:text-6xl">Explore more</h2>
+            <div className="mt-5 h-px w-20 bg-ink/60" />
           </Reveal>
-        </section>
 
-        {/* EXPLORE: open rows, no cards */}
-        <section className="feather [--tint:var(--color-deep)] px-6 py-32 md:px-12 md:py-40">
-          <div className="mx-auto max-w-7xl">
-            <Reveal>
-              <h2 className="font-heading text-4xl md:text-6xl">Explore more</h2>
-              <div className="mt-5 h-px w-20 bg-ink/60" />
-            </Reveal>
-
-            <ul className="mt-14 divide-y divide-line/60">
-              {explore.map((item, i) => (
-                <li key={item.href}>
-                  <Reveal delay={i * 120}>
-                    <Link
-                      href={item.href}
-                      className="group grid items-center gap-4 py-10 md:grid-cols-[1fr_1.6fr_auto] md:gap-12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
-                    >
-                      <h3 className="font-heading text-3xl transition-colors duration-500 group-hover:text-accent md:text-5xl">
-                        {item.title}
-                      </h3>
-                      <p className="text-base font-light leading-7 text-muted">
-                        {item.text}
-                      </p>
-                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-ink">
-                        <span className="inline-block border-b border-transparent pb-1 transition-colors duration-500 group-hover:border-accent">
-                          {item.cta}
-                        </span>
-                      </span>
-                    </Link>
-                  </Reveal>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      </div>
+          <ul className="mt-12 grid gap-6 md:grid-cols-3">
+            {explore.map((item, i) => (
+              <li key={item.href}>
+                <Reveal delay={i * 120} className="h-full">
+                  <Link
+                    href={item.href}
+                    className="group flex h-full flex-col rounded-2xl border-2 border-panel bg-deep p-8 transition-colors duration-300 hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:p-10"
+                  >
+                    <h3 className="font-heading text-3xl md:text-4xl">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 flex-1 text-base font-light leading-7 text-muted">
+                      {item.text}
+                    </p>
+                    <span className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-ink transition-colors group-hover:text-accent">
+                      {item.cta}
+                    </span>
+                  </Link>
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </main>
   );
 }
