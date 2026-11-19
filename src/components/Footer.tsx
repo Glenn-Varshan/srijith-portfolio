@@ -18,7 +18,7 @@ const socialLinks = [
   },
   {
     name: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/srijith.srijith.378537/",
     icon: SiFacebook,
   },
 ];
