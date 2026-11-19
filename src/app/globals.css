@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #161210;
+  --color-deep: #0e0b0a;
+  --color-panel: #262e22;
+  --color-line: #3b4535;
+  --color-ink: #f2ebe0;
+  --color-muted: #b9b1a4;
+  --color-accent: #c28227;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-cormorant), Georgia, serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* A block that fades in from the page background to --tint and back out */
+.feather {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--tint) 30%,
+    var(--tint) 70%,
+    transparent 100%
+  );
 }

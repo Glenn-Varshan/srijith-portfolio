@@ -52,11 +52,11 @@ export default function InstagramGallery() {
   return (
     <section className="px-6 py-20 md:px-16">
       <div className="mb-12 text-center">
-        <p className="text-xs tracking-[0.3em] text-[#b99a63]">
+        <p className="text-xs tracking-[0.3em] text-ink">
           FOLLOW THE JOURNEY
         </p>
 
-        <h2 className="mt-4 font-serif text-3xl md:text-5xl">
+        <h2 className="mt-4 font-heading text-3xl md:text-5xl">
           Instagram
         </h2>
       </div>
@@ -65,7 +65,7 @@ export default function InstagramGallery() {
         {instagramPosts.map((url) => (
           <div
             key={url}
-            className="flex justify-center overflow-hidden rounded-md bg-[#201f1a]"
+            className="flex justify-center overflow-hidden rounded-md bg-deep"
           >
             <blockquote
               className="instagram-media"
@@ -91,7 +91,7 @@ export default function InstagramGallery() {
           href="https://www.instagram.com/srijith_poosarla/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block border border-[#b99a63] px-8 py-4 text-xs tracking-[0.2em] text-[#b99a63] transition-colors hover:bg-[#b99a63] hover:text-[#292522]"
+          className="inline-block border border-accent px-8 py-4 text-xs tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-bg"
         >
           FOLLOW ON INSTAGRAM
         </a>

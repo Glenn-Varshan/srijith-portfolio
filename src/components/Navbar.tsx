@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -35,13 +34,22 @@ export default function Navbar() {
   }, [pathname]);
 
   const isHome = pathname === "/";
+
+  // Already on the homepage: scroll smoothly to the top instead of re-navigating
+  const handleHomeClick = (e: React.MouseEvent) => {
+    setMenuOpen(false);
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   const solidBackground = !isHome || scrolled;
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         solidBackground
-          ? "border-b border-white/10 bg-[#151512]/95 shadow-lg backdrop-blur-md"
+          ? "border-b border-white/10 bg-bg/95 shadow-lg backdrop-blur-md"
           : "border-b border-white/10 bg-transparent"
       }`}
     >
@@ -49,9 +57,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-semibold tracking-[0.2em] text-[#eee8dc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5a477]"
+          onClick={handleHomeClick}
+          className="font-heading text-lg font-semibold tracking-[0.16em] sm:text-2xl text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
         >
-          SRIJITH<span className="text-[#b99462]"> POOSARLA</span>
+          SRIJITH<span className="text-muted"> POOSARLA</span>
         </Link>
 
         {/* Desktop navigation */}
@@ -63,11 +72,12 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
+                onClick={item.href === "/" ? handleHomeClick : undefined}
                 aria-current={active ? "page" : undefined}
-                className={`relative py-1 text-xs uppercase tracking-[0.16em] transition-colors duration-300 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:bg-[#c5a477] after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5a477] ${
+                className={`relative py-1 text-xs uppercase tracking-[0.16em] transition-colors duration-300 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:bg-accent after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
                   active
-                    ? "text-[#c5a477] after:scale-x-100"
-                    : "text-white/70 after:scale-x-0 hover:text-[#c5a477]"
+                    ? "text-ink after:scale-x-100"
+                    : "text-white/70 after:scale-x-0 hover:text-accent"
                 }`}
               >
                 {item.label}
@@ -85,12 +95,12 @@ export default function Navbar() {
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
         >
           <span
-            className={`h-px w-6 bg-[#eee8dc] transition-transform ${
+            className={`h-px w-6 bg-ink transition-transform ${
               menuOpen ? "translate-y-[4px] rotate-45" : ""
             }`}
           />
           <span
-            className={`h-px w-6 bg-[#eee8dc] transition-transform ${
+            className={`h-px w-6 bg-ink transition-transform ${
               menuOpen ? "-translate-y-[3px] -rotate-45" : ""
             }`}
           />
@@ -99,7 +109,7 @@ export default function Navbar() {
 
       {/* Mobile navigation */}
       <div
-        className={`overflow-hidden border-t border-white/10 bg-[#151512] transition-all duration-300 md:hidden ${
+        className={`overflow-hidden border-t border-white/10 bg-bg transition-all duration-300 md:hidden ${
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -108,10 +118,11 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
+              onClick={item.href === "/" ? handleHomeClick : () => setMenuOpen(false)}
               className={`border-b border-white/10 py-4 text-xs uppercase tracking-[0.2em] transition-colors ${
                 pathname === item.href
-                  ? "text-[#c5a477]"
-                  : "text-white/70 hover:text-[#c5a477]"
+                  ? "text-ink"
+                  : "text-white/70 hover:text-accent"
               }`}
             >
               {item.label}

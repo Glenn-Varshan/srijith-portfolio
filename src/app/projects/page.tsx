@@ -35,12 +35,16 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-[#292522] text-[#eee8dc]">
+    <main className="min-h-screen bg-bg text-ink">
 
       {/* Page heading */}
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-40 lg:px-12">
-        <h1 className="font-serif text-6xl leading-tight md:text-8xl">
-          PROJECTS<span className="text-[#b99462]">.</span>
+        <p className="mb-6 text-xs uppercase tracking-[0.35em] text-ink">
+          Selected Work
+        </p>
+
+        <h1 className="font-heading text-6xl leading-tight md:text-8xl">
+          PROJECTS<span className="text-ink">.</span>
         </h1>
 
         <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/55">
@@ -50,11 +54,11 @@ export default function ProjectsPage() {
         </p>
       </section>
       {/* Projects grid */}
-      <section className="border-y border-white/10 bg-[#292522]">
+      <section className="border-y border-white/10 bg-bg">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-12">
 
           <div className="mb-14 flex items-center justify-between">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#b99462]">
+            <p className="text-xs uppercase tracking-[0.3em] text-ink">
               The Collection
             </p>
             <p className="text-xs text-white/35">
@@ -69,7 +73,7 @@ export default function ProjectsPage() {
               <article key={project.number} className="group">
 
                 {/* Project image */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#25231e]">
+                <div className="relative aspect-[16/10] overflow-hidden bg-deep">
 
                   <Image
                     src={project.image}
@@ -90,17 +94,17 @@ export default function ProjectsPage() {
                 {/* Project information */}
                 <div className="mt-6">
 
-                  <p className="text-xs uppercase tracking-[0.25em] text-[#b99462]">
+                  <p className="text-xs uppercase tracking-[0.25em] text-ink">
                     {project.category}
                   </p>
 
                   <div className="mt-3 flex items-start justify-between gap-4">
 
-                    <h2 className="font-serif text-3xl md:text-4xl">
+                    <h2 className="font-heading text-3xl md:text-4xl">
                       {project.title}
                     </h2>
 
-                    <span className="text-xl text-[#b99462]">
+                    <span className="text-xl text-ink">
                       ↗
                     </span>
 
@@ -128,13 +132,13 @@ export default function ProjectsPage() {
       {/* Call to action */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12">
 
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#b99462]">
+        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-ink">
           Discover More
         </p>
 
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
 
-          <h2 className="font-serif text-4xl leading-tight md:text-6xl">
+          <h2 className="font-heading text-4xl leading-tight md:text-6xl">
             Have a project
             <br />
             in mind?
@@ -142,7 +146,7 @@ export default function ProjectsPage() {
 
           <Link
             href="/contact"
-            className="self-start border border-[#292522] px-7 py-4 text-xs uppercase tracking-[0.15em] text-[#c5a477] transition hover:bg-[#b99462] hover:text-[#151512] md:self-auto"
+            className="self-start border border-bg px-7 py-4 text-xs uppercase tracking-[0.15em] text-accent transition hover:bg-accent hover:text-bg md:self-auto"
           >
             Get in Touch ↗
           </Link>

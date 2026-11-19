@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#292522] text-[#eee8dc]">
+    <main className="min-h-screen bg-bg text-ink">
 
 
 {/* ARTIST INTRODUCTION */}
@@ -35,25 +35,32 @@ export default function AboutPage() {
     </div>
 
   {/* OVERLAPPING BIOGRAPHY PANEL */}
-  <div className="relative z-10 mx-auto -mt-16 w-[92%] max-w-[850px] border border-[#b99a63]/30 bg-[#292522] px-6 py-10 shadow-2xl md:-mt-24 md:px-16 md:py-14">
+  <div className="relative z-10 mx-auto -mt-16 w-[92%] max-w-[850px] border border-line bg-panel px-6 py-10 shadow-2xl md:-mt-24 md:px-16 md:py-14">
 
     <div className="text-center">
-      <h1 className="mt-4 font-serif text-4xl md:text-6xl">
+      <p className="text-xs tracking-[0.35em] text-ink">
+        ABOUT THE ARTIST
+      </p>
+
+      <h1 className="mt-4 font-heading text-4xl md:text-6xl">
         Srijith Poosarla
       </h1>
 
-      <p className="mt-4 text-[11px] tracking-[0.4em] text-[#c6a46a]">
+      <p className="mt-4 text-[11px] tracking-[0.4em] text-ink">
         CARNATIC MANDOLIN
       </p>
     </div>
 
-    <div className="mx-auto mt-9 max-w-2xl space-y-5 text-center text-sm leading-8 text-[#d0c5b8] md:text-base">
+    <div className="mx-auto mt-9 max-w-2xl space-y-5 text-center text-sm leading-8 text-muted md:text-base">
       <p>
+        Carnatic Mandolin
+        Classical roots. Live energy.
+        A confluence of Carnatic, folk and contemporary music.
         Srijith Poosarla is a Carnatic mandolinist from Chennai. 
         A student of the legendary Vidwan U. Rajesh, he strives to carry forward the traditions of this style with sincerity. 
         Rooted in raga but unbound by genre, he has earned appreciation for a sound that brings classical, folk and contemporary music into one sonic identity.
       </p>
-       <h2 className="mb-3 font-serif text-2xl text-[#c6a46a]">
+       <h2 className="mb-3 font-heading text-2xl text-ink">
       Collaborations & Venues
       </h2>
       <p>
@@ -63,7 +70,7 @@ export default function AboutPage() {
         He has also collaborated with the band Thisram on wedding performances.
       </p>
 
-      <h2 className="mb-3 font-serif text-2xl text-[#c6a46a]">
+      <h2 className="mb-3 font-heading text-2xl text-ink">
       Learning & Lineage
       </h2>
       <p>
@@ -71,7 +78,7 @@ export default function AboutPage() {
         Music was part of his family long before the mandolin. His grandmother, Mrs P. Rathna Raju, holds a Diploma in Veena from the Dwaram Narsingarao Memorial Music College in Vizianagaram, where she learnt under Guru Chembolu Venkatashastri and Evaturi Vijayeshwarrao.
       </p>
 
-      <h2 className="mb-3 font-serif text-2xl text-[#c6a46a]">
+      <h2 className="mb-3 font-heading text-2xl text-ink">
       Collaborations With Other Styles & Instruments
       </h2>
       <p>
@@ -82,7 +89,7 @@ export default function AboutPage() {
         The shared thread is expression. He builds the music around the other artist, not on top of them.
       </p>
 
-      <h2 className="mb-3 font-serif text-2xl text-[#c6a46a]">
+      <h2 className="mb-3 font-heading text-2xl text-ink">
       Academic Qualifications & Other Interests
       </h2>
       <p>
