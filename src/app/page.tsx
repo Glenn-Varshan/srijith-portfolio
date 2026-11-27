@@ -160,7 +160,7 @@ export default function Home() {
               {venues.map((v) => (
                 <li
                   key={v}
-                 className="rounded-lg border border-line bg-ink px-5 py-2.5 font-heading text-bg text-bg md:text-xl"
+                 className="rounded-lg border border-line bg-panel px-5 py-2.5 font-heading text-ink text-bg md:text-xl"
                 >
                   {v}
                 </li>

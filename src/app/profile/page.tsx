@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -42,7 +41,7 @@ export default function AboutPage() {
         ABOUT THE ARTIST
       </p>
 
-      <h1 className="mt-4 font-heading text-bg/80  text-xl md:text-6xl">
+      <h1 className="mt-4 font-heading text-4xl text-bg md:text-6xl">
         Srijith Poosarla
       </h1>
 
@@ -60,7 +59,7 @@ export default function AboutPage() {
         A student of the legendary Vidwan U. Rajesh, he strives to carry forward the traditions of this style with sincerity. 
         Rooted in raga but unbound by genre, he has earned appreciation for a sound that brings classical, folk and contemporary music into one sonic identity.
       </p>
-       <h2 className="mb-3 font-heading text-2xl text-base text-bg md:text-3xl">
+       <h2 className="mb-3 font-heading text-2xl text-bg md:text-3xl">
       Collaborations & Venues
       </h2>
       <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-lg">
@@ -70,7 +69,7 @@ export default function AboutPage() {
         He has also collaborated with the band Thisram on wedding performances.
       </p>
 
-      <h2 className="mb-3 font-heading text-2xl text-base text-bg md:text-3xl">
+      <h2 className="mb-3 font-heading text-2xl text-bg md:text-3xl">
       Learning & Lineage
       </h2>
       <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-lg">
@@ -78,7 +77,7 @@ export default function AboutPage() {
         Music was part of his family long before the mandolin. His grandmother, Mrs P. Rathna Raju, holds a Diploma in Veena from the Dwaram Narsingarao Memorial Music College in Vizianagaram, where she learnt under Guru Chembolu Venkatashastri and Evaturi Vijayeshwarrao.
       </p>
 
-      <h2 className="mb-5 font-heading text-2xl text-base text-bg md:text-3xl">
+      <h2 className="mb-5 font-heading text-2xl text-bg md:text-3xl">
       Collaborations With Other Styles & Instruments
       </h2>
       <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-lg">
@@ -89,7 +88,7 @@ export default function AboutPage() {
         The shared thread is expression. He builds the music around the other artist, not on top of them.
       </p>
 
-      <h2 className="mb-3 font-heading text-2xl text-base text-bg md:text-3xl">
+      <h2 className="mb-3 font-heading text-2xl text-bg md:text-3xl">
       Academic Qualifications & Other Interests
       </h2>
       <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-lg">
