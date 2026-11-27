@@ -122,7 +122,7 @@ export default function PressPage() {
               Srijith Poosarla
             </h2>
 
-            <div className="mt-8 space-y-5 text-sm leading-8 text-muted">
+            <div className="mt-8 space-y-5 text-md leading-8 text-muted">
               <p>
                 Srijith Poosarla is a Carnatic mandolinist from Chennai and a student of the legendary Vidwan U. Rajesh. 
                 He strives to carry forward the traditions of this style with sincerity, while bringing classical, folk and contemporary music into one sonic identity. 

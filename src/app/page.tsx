@@ -151,21 +151,22 @@ export default function Home() {
       </section>
 
       {/* VENUES: moss tags */}
-      <section className="px-6 py-12 md:px-12">
+      <section className="px-6 py-24 md:px-12 md:py-32">
         <Reveal className="mx-auto max-w-5xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-ink/80">
-            Performed at
-          </p>
-          <ul className="mt-8 flex flex-wrap justify-center gap-3">
-            {venues.map((v) => (
-              <li
-                key={v}
-                className="rounded-lg border border-line bg-panel px-5 py-2.5 font-heading text-lg text-ink md:text-xl"
-              >
-                {v}
-              </li>
-            ))}
-          </ul>
+            <p className="text-xl font-bold uppercase tracking-[0.3em] text-ink">
+             Performed at
+            </p>
+            <ul className="mt-8 flex flex-wrap justify-center gap-3">
+              {venues.map((v) => (
+                <li
+                  key={v}
+                 className="rounded-lg border border-line bg-ink px-5 py-2.5 font-heading text-bg text-bg md:text-xl"
+                >
+                  {v}
+                </li>
+              ))}
+            </ul>
+
         </Reveal>
       </section>
 
