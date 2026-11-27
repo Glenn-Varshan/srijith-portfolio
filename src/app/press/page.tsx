@@ -134,10 +134,6 @@ export default function PressPage() {
 
           {/* RIGHT: DOWNLOADS */}
           <div className="rounded-3xl border-2 border-panel bg-deep p-8 md:p-10">
-            <p className="text-xs tracking-[0.3em] text-ink">
-              MEDIA RESOURCES
-            </p>
-
             <h2 className="mt-5 font-heading text-3xl md:text-4xl">
               Downloads
             </h2>
@@ -193,10 +189,6 @@ export default function PressPage() {
       <section className="mx-auto mb-28 mt-24 w-full max-w-5xl md:mb-36">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="text-xs tracking-[0.3em] text-ink">
-              VISUAL ARCHIVE
-            </p>
-
             <h2 className="mt-4 font-heading text-3xl md:text-5xl">
               Photo Gallery
             </h2>
@@ -268,16 +260,16 @@ export default function PressPage() {
 
       {/* ENQUIRIES */}
       <section className="px-6 pb-28 pt-4 md:px-16">
-        <div className="mx-auto max-w-4xl rounded-3xl bg-ink px-6 py-16 text-center text-bg md:px-16">
-        <p className="text-xs tracking-[0.3em] text-bg/70">
+        <div className="mx-auto max-w-4xl border-2 border-panel rounded-3xl bg-deep px-6 py-16 text-center text-bg md:px-16">
+        <p className="text-xs tracking-[0.3em] text-muted/80">
           MEDIA & BOOKING ENQUIRIES
         </p>
 
-        <h2 className="mt-5 font-heading text-3xl md:text-5xl">
+        <h2 className="mt-5 font-heading text-3xl text-muted/80 md:text-5xl">
           Let's work together.
         </h2>
 
-        <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-bg/80">
+        <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-muted/80">
           For interviews, publications, performances and collaborations,
           please get in touch.
         </p>

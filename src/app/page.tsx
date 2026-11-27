@@ -154,7 +154,7 @@ export default function Home() {
       <section className="px-6 py-24 md:px-12 md:py-32">
         <Reveal className="mx-auto max-w-5xl text-center">
             <p className="text-xl font-bold uppercase tracking-[0.3em] text-ink">
-             Performed at
+             Performed at iconic venues and organizations
             </p>
             <ul className="mt-8 flex flex-wrap justify-center gap-3">
               {venues.map((v) => (

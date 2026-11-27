@@ -34,7 +34,7 @@ export default function AboutPage() {
     </div>
 
   {/* OVERLAPPING BIOGRAPHY PANEL */}
-  <div className="rounded-3xl relative z-10 mx-auto -mt-16 w-[92%] max-w-[850px] border border-line bg-ink px-6 py-10 shadow-2xl md:-mt-24 md:px-16 md:py-14">
+  <div className="relative z-10 mx-auto -mt-16 w-[92%] max-w-[850px] rounded-[2.5rem] bg-ink px-6 py-10 text-bg shadow-[0_0_70px_10px_rgba(242,235,224,0.16)] md:-mt-24 md:rounded-[3.5rem] md:px-16 md:py-14">
 
     <div className="text-center">
       <p className="text-xs tracking-[0.35em] text-bg/80">
@@ -51,7 +51,7 @@ export default function AboutPage() {
     </div>
 
     <div className="mx-auto mt-9 max-w-2xl space-y-5 text-center text-sm leading-8 md:text-bg">
-      <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-md">
+      <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-lg">
         Carnatic Mandolin
         Classical roots. Live energy.
         A confluence of Carnatic, folk and contemporary music.

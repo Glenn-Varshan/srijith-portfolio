@@ -39,10 +39,6 @@ export default function ProjectsPage() {
 
       {/* Page heading */}
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-40 lg:px-12">
-        <p className="mb-6 text-xs uppercase tracking-[0.35em] text-ink">
-          Selected Work
-        </p>
-
         <h1 className="font-heading text-6xl leading-tight md:text-8xl">
           PROJECTS<span className="text-ink">.</span>
         </h1>
@@ -131,12 +127,7 @@ export default function ProjectsPage() {
 
       {/* Call to action */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12">
-
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-ink">
-          Discover More
-        </p>
-
-        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+        <div className="mx-auto max-w-4xl rounded-3xl bg-ink px-6 py-14 text-center text-bg md:px-15 md:py-20">
 
           <h2 className="font-heading text-4xl leading-tight md:text-6xl">
             Have a project
@@ -144,9 +135,9 @@ export default function ProjectsPage() {
             in mind?
           </h2>
 
-          <Link
+          <Link 
             href="/contact"
-            className="self-start border border-bg px-7 py-4 text-xs uppercase tracking-[0.15em] text-accent transition hover:bg-accent hover:text-bg md:self-auto"
+            className="mt-8 inline-block rounded-lg bg-accent px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] text-bg transition-colors hover:bg-panel hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           >
             Get in Touch ↗
           </Link>
