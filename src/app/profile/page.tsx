@@ -51,7 +51,7 @@ export default function AboutPage() {
     </div>
 
     <div className="mx-auto mt-9 max-w-2xl space-y-5 text-center text-sm leading-8 md:text-bg">
-      <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-lg">
+      <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-md">
         Carnatic Mandolin
         Classical roots. Live energy.
         A confluence of Carnatic, folk and contemporary music.

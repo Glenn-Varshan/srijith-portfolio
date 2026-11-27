@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -113,16 +112,12 @@ export default function PressPage() {
         <div className="mx-auto grid w-full max-w-5xl gap-12 lg:grid-cols-[1.05fr_0.95fr]">
 
           {/* LEFT: BIOGRAPHY */}
-          <div>
-            <p className="text-xs tracking-[0.3em] text-ink">
-              ABOUT THE ARTIST
-            </p>
-
+          <div className="rounded-3xl bg-ink p-8 text-bg md:p-12">
             <h2 className="mt-5 font-heading text-3xl md:text-4xl">
               Srijith Poosarla
             </h2>
 
-            <div className="mt-8 space-y-5 text-md leading-8 text-muted">
+            <div className="mt-8 space-y-5 text-md leading-8 text-bg/80">
               <p>
                 Srijith Poosarla is a Carnatic mandolinist from Chennai and a student of the legendary Vidwan U. Rajesh. 
                 He strives to carry forward the traditions of this style with sincerity, while bringing classical, folk and contemporary music into one sonic identity. 
@@ -138,7 +133,7 @@ export default function PressPage() {
           </div>
 
           {/* RIGHT: DOWNLOADS */}
-          <div>
+          <div className="rounded-3xl border-2 border-panel bg-deep p-8 md:p-10">
             <p className="text-xs tracking-[0.3em] text-ink">
               MEDIA RESOURCES
             </p>
@@ -272,8 +267,9 @@ export default function PressPage() {
       </section>
 
       {/* ENQUIRIES */}
-      <section className="border-t border-line px-6 py-20 text-center md:px-16">
-        <p className="text-xs tracking-[0.3em] text-ink">
+      <section className="px-6 pb-28 pt-4 md:px-16">
+        <div className="mx-auto max-w-4xl rounded-3xl bg-ink px-6 py-16 text-center text-bg md:px-16">
+        <p className="text-xs tracking-[0.3em] text-bg/70">
           MEDIA & BOOKING ENQUIRIES
         </p>
 
@@ -281,18 +277,19 @@ export default function PressPage() {
           Let's work together.
         </h2>
 
-        <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-muted">
+        <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-bg/80">
           For interviews, publications, performances and collaborations,
           please get in touch.
         </p>
 
         <a
           href="/contact"
-          className="mt-8 inline-flex items-center gap-3 border border-accent px-8 py-4 text-xs tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-bg"
+          className="mt-8 inline-flex items-center gap-3 rounded-lg bg-accent px-8 py-4 text-xs font-bold tracking-[0.2em] text-bg transition-colors hover:bg-bg hover:text-ink"
         >
           CONTACT
           <ArrowUpRight size={16} />
         </a>
+        </div>
       </section>
 
     </main>

@@ -16,14 +16,14 @@ export default function ContactPage() {
           For performance bookings, collaborations, interviews and
           general enquiries, feel free to get in touch.
         </p>
-        <div>
-          <h2 className="mt-5 font-heading text-2xl">
+        <div className="mt-10 max-w-xl rounded-3xl bg-ink p-8 text-bg md:p-10">
+          <h2 className="font-heading text-3xl">
             General & Booking Enquiries
           </h2>
 
           <a
             href="mailto:p.srijith2004@gmail.com?subject=Enquiry%20for%20Srijith%20Poosarla"
-            className="mt-5 inline-block text-sm text-muted underline decoration-accent underline-offset-8 transition-colors hover:text-accent"
+            className="mt-5 inline-block text-base font-bold text-bg underline decoration-accent decoration-2 underline-offset-8 transition-colors hover:text-panel"
           >
             p.srijith2004@gmail.com
           </a>
