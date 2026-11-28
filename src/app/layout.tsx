@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Lato } from "next/font/google";
 import "./globals.css";
@@ -22,7 +21,10 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Srijith Poosarla | Mandolin Artist",
+  title: {
+    default: "Srijith Poosarla | Mandolin Artist",
+    template: "%s | Srijith Poosarla",
+  },
   description:
     "Official portfolio of Srijith Poosarla. Explore his musical journey, projects, performances and press resources.",
 };

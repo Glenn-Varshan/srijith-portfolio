@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
+
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Profile",
+  description:
+    "Carnatic mandolinist from Chennai and student of Vidwan U. Rajesh. Biography, collaborations and venues.",
+};
 
 export default function AboutPage() {
   return (
@@ -52,9 +60,6 @@ export default function AboutPage() {
 
     <div className="mx-auto mt-9 max-w-2xl space-y-5 text-center text-sm leading-8 md:text-bg">
       <p className="mt-6 space-y-5 text-base leading-8 text-bg/80 md:text-lg">
-        Carnatic Mandolin
-        Classical roots. Live energy.
-        A confluence of Carnatic, folk and contemporary music.
         Srijith Poosarla is a Carnatic mandolinist from Chennai. 
         A student of the legendary Vidwan U. Rajesh, he strives to carry forward the traditions of this style with sincerity. 
         Rooted in raga but unbound by genre, he has earned appreciation for a sound that brings classical, folk and contemporary music into one sonic identity.

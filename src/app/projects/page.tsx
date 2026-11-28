@@ -3,6 +3,9 @@ import InstagramGallery from "@/components/InstagramGallery";
 import Image from "next/image";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+
 const projects = [
   {
     number: "01",
@@ -32,6 +35,12 @@ const projects = [
     status: "Explore",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Projects and collaborations by Srijith Poosarla.",
+};
 
 export default function ProjectsPage() {
   return (

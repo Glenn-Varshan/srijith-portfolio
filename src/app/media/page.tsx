@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 
 import InstagramGallery from "@/components/InstagramGallery";
+
+export const metadata: Metadata = {
+  title: "Media",
+  description:
+    "Performances, moments and music from Srijith Poosarla, Carnatic mandolinist.",
+};
 
 export default function MediaPage() {
   return (

@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
+
 import Link from "next/link";
+
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Booking and general enquiries for Srijith Poosarla.",
+};
 
 export default function ContactPage() {
   return (
